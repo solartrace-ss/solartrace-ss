@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="fig5" name="SDG Alignment">
+    <mxGraphModel dx="1016" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="center5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495E;strokeColor=#2C3E50;fontSize=14;fontStyle=1;fontColor=#FFFFFF" value="SDG Alignment" vertex="1">
+          <mxGeometry height="40" width="180" x="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sdg7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2ECC71;strokeColor=#27AE60;fontSize=13;fontStyle=1;fontColor=#FFFFFF" value="SDG 7&lt;br&gt;Clean Energy" vertex="1">
+          <mxGeometry height="50" width="140" x="130" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sdg13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontSize=13;fontStyle=1;fontColor=#FFFFFF" value="SDG 13&lt;br&gt;Climate Action" vertex="1">
+          <mxGeometry height="50" width="140" x="330" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sdg5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontSize=13;fontStyle=1;fontColor=#FFFFFF" value="SDG 5&lt;br&gt;Gender Equality" vertex="1">
+          <mxGeometry height="50" width="140" x="530" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sdg3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9B59B6;strokeColor=#8E44AD;fontSize=13;fontStyle=1;fontColor=#FFFFFF" value="SDG 3&lt;br&gt;Health" vertex="1">
+          <mxGeometry height="50" width="140" x="130" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="sdg15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#16A085;fontSize=13;fontStyle=1;fontColor=#FFFFFF" value="SDG 15&lt;br&gt;Life on Land" vertex="1">
+          <mxGeometry height="50" width="140" x="330" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="arr7" edge="1" parent="1" source="center5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#2ECC71" target="sdg7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr13" edge="1" parent="1" source="center5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#F39C12" target="sdg13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr5" edge="1" parent="1" source="center5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#E74C3C" target="sdg5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr7_3" edge="1" parent="1" source="sdg7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9B59B6" target="sdg3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr13_15" edge="1" parent="1" source="sdg13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#1ABC9C" target="sdg15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="desc7" parent="1" style="text;html=1;strokeColor=none;fillColor=#F0F0F0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="Reduces reliance on biomass through solar energy" vertex="1">
+          <mxGeometry height="30" width="160" x="120" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="desc13" parent="1" style="text;html=1;strokeColor=none;fillColor=#F0F0F0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="Mitigates climate change through CO₂ reduction" vertex="1">
+          <mxGeometry height="30" width="160" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="desc5" parent="1" style="text;html=1;strokeColor=none;fillColor=#F0F0F0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="Reduces burden on women and children" vertex="1">
+          <mxGeometry height="30" width="160" x="520" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="desc3" parent="1" style="text;html=1;strokeColor=none;fillColor=#F0F0F0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="Reduces indoor air pollution" vertex="1">
+          <mxGeometry height="30" width="160" x="120" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="desc15" parent="1" style="text;html=1;strokeColor=none;fillColor=#F0F0F0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" value="Reduces deforestation pressure" vertex="1">
+          <mxGeometry height="30" width="160" x="320" y="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
