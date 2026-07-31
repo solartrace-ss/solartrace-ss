@@ -1,1 +1,414 @@
-
+{
+  "name": "SolarTrace - Smart Solar Cooker",
+  "version": "1.0.0",
+  "project": {
+    "name": "SolarTrace",
+    "description": "IoT-Enhanced Solar Cooker with RTC-Based Automatic Sun Tracking",
+    "team": "South Sudan - UbuntuNet Alliance Women Hackathon 2026"
+  },
+  "template": {
+    "id": "solar_trace_template",
+    "name": "SolarTrace Template",
+    "description": "Smart solar cooker control and monitoring dashboard"
+  },
+  "devices": [
+    {
+      "id": "esp32_001",
+      "name": "SolarTrace Controller",
+      "type": "ESP32",
+      "hardware": "ESP32-WROOM-32",
+      "status": "online"
+    }
+  ],
+  "dashboard": {
+    "tabs": [
+      {
+        "id": "tab_main",
+        "name": "Main Control",
+        "layout": "grid",
+        "columns": 12,
+        "widgets": [
+          {
+            "id": "widget_title",
+            "type": "Label",
+            "name": "title",
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 1,
+            "properties": {
+              "text": "<b>SOLARTRACE - Smart Solar Cooker</b>",
+              "fontSize": 24,
+              "color": "#1A237E",
+              "align": "center"
+            }
+          },
+          {
+            "id": "widget_subtitle",
+            "type": "Label",
+            "name": "subtitle",
+            "x": 0,
+            "y": 1,
+            "width": 12,
+            "height": 1,
+            "properties": {
+              "text": "Team South Sudan | UbuntuNet Alliance Women Hackathon 2026",
+              "fontSize": 14,
+              "color": "#666666",
+              "align": "center"
+            }
+          },
+          {
+            "id": "widget_mode_select",
+            "type": "Dropdown",
+            "name": "mode_select",
+            "x": 0,
+            "y": 2,
+            "width": 4,
+            "height": 2,
+            "pin": "V0",
+            "properties": {
+              "label": "Cooking Mode",
+              "options": [
+                {"id": 0, "label": "IDLE"},
+                {"id": 1, "label": "Cooking (80-100°C)"},
+                {"id": 2, "label": "Sterilization (120°C/20min)"},
+                {"id": 3, "label": "Boil Water (100°C)"},
+                {"id": 4, "label": "Warming (70°C)"}
+              ],
+              "selected": 0,
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_temperature",
+            "type": "Gauge",
+            "name": "temperature",
+            "x": 4,
+            "y": 2,
+            "width": 4,
+            "height": 4,
+            "pin": "V1",
+            "properties": {
+              "label": "Temperature",
+              "unit": "°C",
+              "min": 0,
+              "max": 150,
+              "thresholds": [
+                {"value": 70, "color": "#4CAF50"},
+                {"value": 100, "color": "#FF9800"},
+                {"value": 120, "color": "#F44336"},
+                {"value": 130, "color": "#D32F2F"}
+              ],
+              "valueFormat": "0",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_target_temp",
+            "type": "Label",
+            "name": "target_temp",
+            "x": 8,
+            "y": 2,
+            "width": 4,
+            "height": 1,
+            "pin": "V6",
+            "properties": {
+              "label": "Target Temperature",
+              "value": "-- °C",
+              "fontSize": 16,
+              "color": "#1A237E",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_status",
+            "type": "Label",
+            "name": "status",
+            "x": 8,
+            "y": 3,
+            "width": 4,
+            "height": 1,
+            "pin": "V7",
+            "properties": {
+              "label": "System Status",
+              "value": "IDLE",
+              "fontSize": 16,
+              "color": "#4CAF50",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_session",
+            "type": "Label",
+            "name": "session",
+            "x": 8,
+            "y": 4,
+            "width": 4,
+            "height": 1,
+            "pin": "V8",
+            "properties": {
+              "label": "Session ID",
+              "value": "---",
+              "fontSize": 12,
+              "color": "#666666",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_emergency",
+            "type": "Button",
+            "name": "emergency",
+            "x": 0,
+            "y": 6,
+            "width": 4,
+            "height": 2,
+            "pin": "V4",
+            "properties": {
+              "label": "EMERGENCY STOP",
+              "mode": "switch",
+              "onColor": "#D32F2F",
+              "offColor": "#4CAF50",
+              "onLabel": "STOPPED",
+              "offLabel": "SAFE",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_co2_savings",
+            "type": "Label",
+            "name": "co2_savings",
+            "x": 4,
+            "y": 6,
+            "width": 4,
+            "height": 2,
+            "pin": "V5",
+            "properties": {
+              "label": "CO₂ Savings",
+              "value": "0.000 tons",
+              "fontSize": 18,
+              "color": "#4CAF50",
+              "align": "center",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_logging",
+            "type": "Label",
+            "name": "logging",
+            "x": 8,
+            "y": 6,
+            "width": 4,
+            "height": 2,
+            "pin": "V3",
+            "properties": {
+              "label": "Logging Status",
+              "value": "Idle",
+              "fontSize": 14,
+              "color": "#666666",
+              "align": "center",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_notifications",
+            "type": "Notification",
+            "name": "notifications",
+            "x": 0,
+            "y": 8,
+            "width": 12,
+            "height": 4,
+            "pin": "V2",
+            "properties": {
+              "label": "Notifications",
+              "maxItems": 10,
+              "theme": "dark"
+            }
+          }
+        ]
+      },
+      {
+        "id": "tab_advanced",
+        "name": "Advanced",
+        "layout": "grid",
+        "columns": 12,
+        "widgets": [
+          {
+            "id": "widget_advanced_title",
+            "type": "Label",
+            "name": "advanced_title",
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 1,
+            "properties": {
+              "text": "<b>Advanced Settings & Diagnostics</b>",
+              "fontSize": 20,
+              "color": "#1A237E",
+              "align": "center"
+            }
+          },
+          {
+            "id": "widget_temp_stats",
+            "type": "Label",
+            "name": "temp_stats",
+            "x": 0,
+            "y": 1,
+            "width": 6,
+            "height": 2,
+            "properties": {
+              "label": "Temperature Statistics",
+              "value": "Min: --°C\nMax: --°C\nAvg: --°C",
+              "fontSize": 14,
+              "color": "#666666",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_system_info",
+            "type": "Label",
+            "name": "system_info",
+            "x": 6,
+            "y": 1,
+            "width": 6,
+            "height": 2,
+            "properties": {
+              "label": "System Info",
+              "value": "Firmware: v1.0.0\nMode: --\nStatus: --",
+              "fontSize": 14,
+              "color": "#666666",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_servo_position",
+            "type": "Label",
+            "name": "servo_position",
+            "x": 0,
+            "y": 3,
+            "width": 6,
+            "height": 2,
+            "properties": {
+              "label": "Servo Position",
+              "value": "--°",
+              "fontSize": 16,
+              "color": "#1A237E",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_solar_angle",
+            "type": "Label",
+            "name": "solar_angle",
+            "x": 6,
+            "y": 3,
+            "width": 6,
+            "height": 2,
+            "properties": {
+              "label": "Solar Angle",
+              "value": "--°",
+              "fontSize": 16,
+              "color": "#FF9800",
+              "theme": "dark"
+            }
+          },
+          {
+            "id": "widget_debug",
+            "type": "Label",
+            "name": "debug",
+            "x": 0,
+            "y": 5,
+            "width": 12,
+            "height": 4,
+            "properties": {
+              "label": "Debug Console",
+              "value": "System ready...",
+              "fontSize": 12,
+              "color": "#666666",
+              "theme": "dark"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "widgets": {
+    "V0": {
+      "name": "Mode Selection",
+      "type": "Dropdown",
+      "description": "Select cooking mode (IDLE, Cooking, Sterilization, Boil Water, Warming)"
+    },
+    "V1": {
+      "name": "Temperature Display",
+      "type": "Gauge",
+      "description": "Real-time temperature reading from MAX6675 thermocouple"
+    },
+    "V2": {
+      "name": "Notifications",
+      "type": "Notification",
+      "description": "Push notifications for temperature alerts and system events"
+    },
+    "V3": {
+      "name": "Logging Status",
+      "type": "Label",
+      "description": "Current logging status to SD card"
+    },
+    "V4": {
+      "name": "Emergency Stop",
+      "type": "Button",
+      "description": "Emergency stop button - moves reflector to idle position"
+    },
+    "V5": {
+      "name": "CO₂ Savings",
+      "type": "Label",
+      "description": "Estimated CO₂ emissions saved (tons)"
+    },
+    "V6": {
+      "name": "Target Temperature",
+      "type": "Label",
+      "description": "Target temperature for current cooking mode"
+    },
+    "V7": {
+      "name": "System Status",
+      "type": "Label",
+      "description": "Current system operational status"
+    },
+    "V8": {
+      "name": "Session ID",
+      "type": "Label",
+      "description": "Current cooking session identifier"
+    }
+  },
+  "automations": [
+    {
+      "id": "auto_notify",
+      "name": "Temperature Alert",
+      "trigger": {
+        "type": "pin",
+        "pin": "V1",
+        "condition": "greater_than",
+        "value": 130
+      },
+      "action": {
+        "type": "notification",
+        "message": "OVERHEAT: Temperature exceeded 130°C!",
+        "priority": "high"
+      }
+    },
+    {
+      "id": "auto_notify_target",
+      "name": "Target Reached Alert",
+      "trigger": {
+        "type": "pin",
+        "pin": "V1",
+        "condition": "equals",
+        "value": "target_temp"
+      },
+      "action": {
+        "type": "notification",
+        "message": "Target temperature reached!",
+        "priority": "normal"
+      }
+    }
+  ]
+}
