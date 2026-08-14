@@ -24,7 +24,13 @@ SolarTrace is a smart IoT-connected solar cooker with automatic sun tracking for
 - Abuk Santino Garang Chan - Testing & Logistics
 
 ## Week 1 Submission
- [South_SUdan_SOLARTRACE_Chapter_One.pdf](docs/South_SUdan_SOLARTRACE_Chapter_One.pdf)
+ [South_Sudan_SOLARTRACE_Chapter_One.pdf](docs/Week1_Submission/South_SUdan_SOLARTRACE_Chapter_One.pdf)
+## Week 2 Submission
+ [South_Sudan_SOLARTRACE_Chapter_Two.pdf](docs/Week2_Submission/South_Sudan_SOLARTRACE_Chapter_Two.pdf)
+## Week 3 Submission
+ [South_Sudan_SOLARTRACE_Week_3_Progress_Report.pdf](docs/Week3_Submission/Week_3_Progress_Report.pdf)
+## Week 4 Submission
+ [South_Sudan_SOLARTRACE_Week_4_Progress_Report.pdf](docs/Week3_Submission/Week_4_Progress_Report.pdf)
 
 ## License
 MIT
