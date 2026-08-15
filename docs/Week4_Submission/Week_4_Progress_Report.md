@@ -392,7 +392,7 @@ Week 4 focused exclusively on component testing and software development. All 15
 **Key Achievements:**
 - 100% component testing completed
 - 100% sensor calibration completed
-- 1,280 lines of code written
+- 850 lines of code written
 - 37 commits to GitHub
 - 9 functional software modules
 - 95% software completion
