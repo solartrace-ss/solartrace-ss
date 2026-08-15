@@ -122,22 +122,6 @@ This report documents the progress made during Week 4 (August 8-14, 2026) of the
 - Memory management
 - LED status indicators
 
-/solartrace-ss/
-├── solartrace.ino # Main program
-├── config.h # Configuration constants
-├── wifi_manager.h # WiFi connection handling
-├── blynk_handler.h # Blynk cloud integration
-├── servo_control.h # Servo positioning logic
-├── temp_sensor.h # Temperature reading
-├── rtc_scheduler.h # Time-based scheduling
-├── lcd_display.h # LCD output control
-├── button_handler.h # Push button input
-├── sd_logger.h # SD card logging
-├── safety_monitor.h # Safety shutdown logic
-└── utilities.h # Helper functions
-
-text
-
 ### 3.4 Key Functions Implemented
 
 | Function Name | Description | Status |
