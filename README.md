@@ -30,7 +30,7 @@ SolarTrace is a smart IoT-connected solar cooker with automatic sun tracking for
 ## Week 3 Submission
  [South_Sudan_SOLARTRACE_Week_3_Progress_Report.pdf](docs/Week3_Submission/Week_3_Progress_Report.pdf)
 ## Week 4 Submission
- [South_Sudan_SOLARTRACE_Week_4_Progress_Report.pdf](docs/Week3_Submission/Week_4_Progress_Report.pdf)
+ [South_Sudan_SOLARTRACE_Week_4_Week_4_Progress_Report.md](docs/Week4_Submission/Week_4_Progress_Report.md)
 
 ## License
 MIT
